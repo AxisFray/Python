@@ -1,3 +1,4 @@
+import random
 class Pracownik:
     def __init__(self,imie,nazwisko,wiek):
         self.imie=imie
@@ -13,6 +14,27 @@ class Pracownik:
         self.imie=imie1
         self.wiek=wiek1
 
-p1 = Pracownik
-p1.Dane(p1)
-p1.Vis(p1)
+
+tab = []
+class Wojownik:
+    def __init__(self,imie):
+        self.imie=imie
+        self.sila =sila
+        self.szybkosc=szybkosc
+        self.jedzenie = jedzenie
+
+    szybkosc = random.randint(0,3)
+    sila=random.randint(0,3)
+    jedzenie= random.randint(0,3)
+    def atak(self):
+        pass
+
+
+W1 = Wojownik("Janek")
+
+
+
+
+
+
+
