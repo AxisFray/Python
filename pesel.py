@@ -6,8 +6,8 @@
 # L liczba porzadkowa
 # P plec parzysta kobieta
 # k cyfra kontrolna
-#po 200r
-#
+#po 2000r
+# dodac 20 do miesiaca
 #
 #
 #
