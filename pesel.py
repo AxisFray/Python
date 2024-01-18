@@ -29,4 +29,17 @@ def GenPesel():
     for i in range(0,3):
         x = random.randint(0,9)
         pesel += str(x)
-    pass
+    return pesel
+
+def SprawdzPesel(pesel):
+    if len(pesel)!= 11:
+        return "ZlyPesel"
+    rok = pesel[0]+pesel[1]
+    miesiac = pesel[2]+pesel[3]
+    dzien = pesel[4]+pesel[5]
+    plec = pesel[9]
+    kontrol = pesel[10]
+    
+    if int(rok)>24 or int(miesiac)<0 or int(miesiac)>32:
+        return "zle dane"
+
