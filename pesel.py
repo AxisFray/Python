@@ -11,7 +11,10 @@ import random
 #
 #
 #
-
+def SprawdzCyfry(text):
+    for i in text:
+        if i!= '1' or i!= '2' or i!= '3' or i!= '4' or i!= '5' or i!= '6' or i!= '7' or i!= '8' or i!= '9':
+            return False
 
 def GenPesel():
     while plec<0 or plec>100:
@@ -34,12 +37,23 @@ def GenPesel():
 def SprawdzPesel(pesel):
     if len(pesel)!= 11:
         return "ZlyPesel"
+    if SprawdzCyfry(pesel)==False:
+        return "Zly Pesel"
     rok = pesel[0]+pesel[1]
     miesiac = pesel[2]+pesel[3]
     dzien = pesel[4]+pesel[5]
     plec = pesel[9]
     kontrol = pesel[10]
-    
+    text1 = "1379137913" 
+    suma =0
     if int(rok)>24 or int(miesiac)<0 or int(miesiac)>32:
         return "zle dane"
-
+    for i in pesel:
+        for j in text1:
+            suma += i*j
+    suma = str(suma)
+    if suma[-1]== pesel[-1]:
+        return True
+    else:
+        return False
+            
