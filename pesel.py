@@ -32,8 +32,10 @@ def GenPesel():
     pesel= ""
     
     if rok>2000:
-        miesiac+=int(miesiac) +20
+        miesiac+=miesiac +20
     miesiac = str(miesiac)
+    rok  = str(rok)
+    dzien=str(dzien)
     pesel+= rok[2]+rok[3]+miesiac+dzien
     for i in range(0,3):
         x = random.randint(0,9)
