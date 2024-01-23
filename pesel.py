@@ -17,17 +17,23 @@ def SprawdzCyfry(text):
             return False
 
 def GenPesel():
+    plec = int(input("Podaj plec - parzysta=kobieta, nieparzysta=mezczyzna"))
     while plec<0 or plec>100:
-        plec = int(input("Podaj plec - parzysta=kobieta, nieparzysta=mezczyzna"))
+            plec = int(input("Podaj plec - parzysta=kobieta, nieparzysta=mezczyzna"))
+
     rok = int(input("Podaj  rok urodzenia"))
+    miesiac = int(input("Podaj miesiac urodzenia"))
     while miesiac<0:
         miesiac = int(input("Podaj miesiac urodzenia"))
+    dzien = int(input("Podaj dzien urodzenia"))
+
     while dzien<0 or dzien>32:
         dzien = int(input("Podaj dzien urodzenia"))
     pesel= ""
-    miesiac = str(miesiac)
+    
     if rok>2000:
-        miesiac+=20
+        miesiac+=int(miesiac) +20
+    miesiac = str(miesiac)
     pesel+= rok[2]+rok[3]+miesiac+dzien
     for i in range(0,3):
         x = random.randint(0,9)
@@ -56,4 +62,4 @@ def SprawdzPesel(pesel):
         return True
     else:
         return False
-            
+print(GenPesel())
