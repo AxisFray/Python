@@ -33,4 +33,23 @@ print(dane.count())
 #liczy ile jest kolumn zapelnionych
 print(dane[::2][dane>50].count())
 
+print("---------------------------")
+l1 =[]
+for _ in range(0,100):
+    l1 .append(random.randint(0,100))
+dane1 =pd.Series(l1)
+print(f"srednia  to { dane1.mean()}")
+
+slownik = {"apples":32,"bananas":534,"grapes":344}
+dane2 = pd.Series(slownik)
+
+miesiace= {
+    "polish": ["styczen","luty","marzec","kwiecien","maj","czerwiec",
+                "lipiec","sierpien","wrzesien","pazdziernik","listopad","grudzien"],
+    "days" :  [31,28,31,30,31,30,31,31,30,31,30,31]
+}
+dane3 = pd.Series(miesiace)
+
+
+
 
