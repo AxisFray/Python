@@ -51,7 +51,7 @@ miesiace= {
 dane3 = pd.Series(miesiace)
 
 #wczytywanie plikow csv jako listy
-csv = pd.read_csv("Pracownicy1.csv",sep=";")
+csv = pd.read_csv("Pracownicy 2.csv",sep=",")
 print(csv)
 
 
