@@ -1,0 +1,48 @@
+
+list.append(x)
+
+    Dodaje element na końcu listy. Ekwiwalent a[len(a):] = [x].
+
+list.extend(iterable)
+
+    Rozszerza listę przez dodanie wszystkich elementów iterable’a. Ekwiwalent a[len(a):] = iterable.
+
+list.insert(i, x)
+
+    Wstawia element na podaną pozycję. Pierwszy argument jest indeksem elementu, przed który wstawiamy, więc a.insert(0, x) wstawia na początek listy a a.insert(len(a), x) odpowiada a.append(x).
+
+
+OPERACJE NA TABLICACH
+list.remove(x)
+
+    Usuń pierwszy element z listy, którego wartość jest równa x. Rzuca ValueError, jeśli nie ma takiego elementu.
+
+list.pop([i])
+
+    Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list. It raises an IndexError if the list is empty or the index is outside the list range.
+
+list.clear()
+
+    Usuwa wszystkie elementy z listy. Ekwiwalent del a[:].
+
+list.index(x[, start[, end]])
+
+    Zwraca indeks (liczony od zera) pierwszego elementu na liście, którego wartość jest równa x. Rzuca ValueError, jeśli nie ma takiego elementu.
+
+    Opcjonalne argumenty start i end są interpretowane jak w notacji slice i służą do ograniczenia wyszukiwania do szczególnej podsekwencji listy. Zwracany indeks jest wyliczany względem początku pełnej sekwencji, nie względem argumentu start.
+
+list.count(x)
+
+    Zwraca liczbę razy, jaką x występuje w liście.
+
+list.sort(*, key=None, reverse=False)
+
+    Sortuje elementy listy w miejscu (argumenty mogą służyć do dostosowania sortowania, patrz sorted() po ich wyjaśnienie).
+
+list.reverse()
+
+    Odwraca elementy listy w miejscu.
+
+list.copy()
+
+    Zwraca płytką kopię listy. Ekwiwalent a[:].
