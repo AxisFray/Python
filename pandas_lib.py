@@ -39,6 +39,9 @@ print(dane.count())
 #liczy ile jest kolumn zapelnionych
 print(dane[::2][dane>50].count())
 
+dane.rename(columns={"kol1":"kol2"},inplace=True)
+#zmiana nazwy kolumny
+
 print("---------------------------")
 l1 =[]
 for _ in range(0,100):
