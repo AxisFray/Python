@@ -6,6 +6,12 @@ for _ in range(0,100):
     lista .append(random.randint(0,100))
 dane = pd.Series(lista)
 
+print(dane.to_string())
+#wyswietlanie wszystkich danych
+
+print(dane.loc[:100])
+#wyswietla 100 rekordow
+
 print(dane.head(10))
 #print pierwsze 10 elementow
 
