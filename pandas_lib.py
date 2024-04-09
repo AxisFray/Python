@@ -6,6 +6,23 @@ for _ in range(0,100):
     lista .append(random.randint(0,100))
 dane = pd.Series(lista)
 
+a = [1, 7, 2]
+myvar = pd.Series(a, index = ["x", "y", "z"])
+#argumenty to kolumny, indeksy
+
+calories = {"day1": 420, "day2": 380, "day3": 390}
+myvar = pd.Series(calories)
+#tutaj indeksami będą przypisane wartosci w słowniku
+
+mydict = [{'a': 1, 'b': 2, 'c': 3, 'd': 4},
+           {'a': 100, 'b': 200, 'c': 300, 'd': 400},
+           {'a': 1000, 'b': 2000, 'c': 3000, 'd': 4000}]
+df = pd.DataFrame(mydict)
+      a     b     c     d
+0     1     2     3     4
+1   100   200   300   400
+2  1000  2000  3000  4000
+
 print(dane.to_string())
 #wyswietlanie wszystkich danych
 
@@ -29,6 +46,9 @@ print(dane.mean())
 
 print(dane.median())
 #wartosc srodkowa
+
+print(dane.info())
+#wyswietla informacje o danych
 
 print(dane[1:50:3])
 #print elementy od 1 do 50 co 3
@@ -69,6 +89,9 @@ dane3 = pd.Series(miesiace)
 #wczytywanie plikow csv jako listy
 csv = pd.read_csv("Pracownicy 2.csv",sep=",")
 print(csv)
+
+json = pd.read_json("Pracownicy 2.json",sep=',')
+print(json)
 
 
 
