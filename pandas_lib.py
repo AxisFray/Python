@@ -34,6 +34,10 @@ print(dane[1:50:3])
 #print elementy od 1 do 50 co 3
 print(dane[::2])
 #print dane co 2
+print(dane[3:])
+#wypisz dane od 3
+print(dane[:2])
+#wypisz dane bez ostatnich 2
 
 print(dane.count())
 #liczy ile jest kolumn zapelnionych
@@ -41,6 +45,9 @@ print(dane[::2][dane>50].count())
 
 dane.rename(columns={"kol1":"kol2"},inplace=True)
 #zmiana nazwy kolumny
+
+dane["imie"] = dane["imie"].map(funkcja)
+#map przechodzi przez wszystkie rekordy i wykonuje na nich funkcję
 
 print("---------------------------")
 l1 =[]
