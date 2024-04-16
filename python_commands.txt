@@ -76,7 +76,14 @@ f.close() #zamykanie pliku
 RANDOM - biblioteka wbudowana
 
 shuffle(tablica) #losowo zamienia elementy tablicy ,nic nie zwraca
+
 randint(a,b) #losowe liczby od a do b
+
 choice(lista) #losowy element listy
+
 sample(lista,ilosc) # zwraca liste z dlugoscia ilosc wybrana z listy
+
 random() #losowa liczba float z zakresu 0.0 - 1.0 bez 1
+
+
+
