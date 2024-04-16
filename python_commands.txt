@@ -1,4 +1,4 @@
-
+-    -    -    -    -    -    -    -    LISTY    -    -    -    -    -    -    -    -    -    -    -
 list.append(x)
 
     Dodaje element na końcu listy. Ekwiwalent a[len(a):] = [x].
@@ -46,3 +46,28 @@ list.reverse()
 list.copy()
 
     Zwraca płytką kopię listy. Ekwiwalent a[:].
+
+
+
+-    -    -    -    -    -    -    -    PLIKI    -    -    -    -    -    -    -    -    -    -    -
+
+filepath = "dane.txt"  # ścieżka relative
+filepath = "E:\blog\dane.txt"  # ścieżka absolute
+f = open(filepath, "r")  # otwarcie pliku
+    “r” – plik otwarty do odczytu (read)
+    “w” – plik otwarty do zapisu (write), przed zapisem zawartość pliku jest usuwana
+    “a” – plik otwarty do zapisu, dodaje nową treść na końcu pliku, nie usuwa starej (append)
+f = open(filepath, "r", encoding="utf-8")
+
+f.read() # czyta caly plik
+f.read(8) #pierwsze 8 znakow
+f.readline() #czyta pierwszą linie kazdeponowne uzycie to kolejna linia
+
+for line in f: 
+    print(line) #czytanie za pomoca petli
+lines = f.readlines() #linestolista w ktorej jeden element to linia z pliku
+
+f.write("dane2") #zapisuje do pliku tekst
+f.writelines(lines) #zapisuje do pliku tablicę każdy element to linia
+
+f.close() #zamykanie pliku
