@@ -69,6 +69,9 @@ dane.rename(columns={"kol1":"kol2"},inplace=True)
 dane["imie"] = dane["imie"].map(funkcja)
 #map przechodzi przez wszystkie rekordy i wykonuje na nich funkcję
 
+df = df.rename(columns={'client_id': 'client_code', 'count': 'quantity'})
+#zmiana nazwy
+
 print("---------------------------")
 l1 =[]
 for _ in range(0,100):
