@@ -1,4 +1,4 @@
--    -    -    -    -    -    -    -    LISTY    -    -    -    -    -    -    -    -    -    -    -
+-    -    -    -    -    -    -    -    LISTY    -    -    -    -    -    -    -    -    -    -    
 list.append(x)
 
     Dodaje element na końcu listy. Ekwiwalent a[len(a):] = [x].
@@ -49,7 +49,7 @@ list.copy()
 
 
 
--    -    -    -    -    -    -    -    PLIKI    -    -    -    -    -    -    -    -    -    -    -
+-    -    -    -    -    -    -    -    PLIKI    -    -    -    -    -    -    -    -    -    -    
 
 filepath = "dane.txt"  # ścieżka relative
 filepath = "E:\blog\dane.txt"  # ścieżka absolute
@@ -71,3 +71,12 @@ f.write("dane2") #zapisuje do pliku tekst
 f.writelines(lines) #zapisuje do pliku tablicę każdy element to linia
 
 f.close() #zamykanie pliku
+
+-    -    -    -    -    -    -    -    RANDOM    -    -    -    -    -    -    -    -    -    
+RANDOM - biblioteka wbudowana
+
+shuffle(tablica) #losowo zamienia elementy tablicy ,nic nie zwraca
+randint(a,b) #losowe liczby od a do b
+choice(lista) #losowy element listy
+sample(lista,ilosc) # zwraca liste z dlugoscia ilosc wybrana z listy
+random() #losowa liczba float z zakresu 0.0 - 1.0 bez 1
