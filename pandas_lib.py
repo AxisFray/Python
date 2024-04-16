@@ -72,7 +72,13 @@ dane["imie"] = dane["imie"].map(funkcja)
 df = df.rename(columns={'client_id': 'client_code', 'count': 'quantity'})
 #zmiana nazwy
 
-print("---------------------------")
+df['count'] = df['count'].astype(int)  
+# Zmieniamy typ danych kolumny 'count' na int
+
+df = df.drop_duplicates()  
+# Usuwamy duplikaty
+
+
 l1 =[]
 for _ in range(0,100):
     l1 .append(random.randint(0,100))
