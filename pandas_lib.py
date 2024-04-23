@@ -26,8 +26,14 @@ df = pd.DataFrame(mydict)
 print(dane.to_string())
 #wyswietlanie wszystkich danych
 
+print(dane.loc["Imie"])
 print(dane.loc[:100])
-#wyswietla 100 rekordow
+#wyswietla 100 rekordow lub specyficzna kolumne
+
+print(dane.iloc[1,2])
+#wyswietla kolumne 1 rekord 2
+print(dane.iloc[[1,2]])
+#wyswietla obiekt dataframe z listy indexów x=1 i 2
 
 print(dane.head(10))
 #print pierwsze 10 elementow
