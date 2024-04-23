@@ -4,20 +4,24 @@ lista = []
 
 for _ in range(0,100):
     lista .append(random.randint(0,100))
+    
 dane = pd.Series(lista) #jedna kolumna
 dane = pd.DataFrame(lista) #wiele kolumn
+
 a = [1, 7, 2]
 myvar = pd.Series(a, index = ["x", "y", "z"])
 #argumenty to kolumny, indeksy
 
 calories = {"day1": 420, "day2": 380, "day3": 390}
-myvar = pd.Series(calories)
 #tutaj indeksami będą przypisane wartosci w słowniku
 
 mydict = [{'a': 1, 'b': 2, 'c': 3, 'd': 4},
            {'a': 100, 'b': 200, 'c': 300, 'd': 400},
            {'a': 1000, 'b': 2000, 'c': 3000, 'd': 4000}]
+
+myvar = pd.Series(calories)
 df = pd.DataFrame(mydict)
+
       a     b     c     d
 0     1     2     3     4
 1   100   200   300   400
@@ -30,10 +34,15 @@ print(dane.loc["Imie"])
 print(dane.loc[:100])
 #wyswietla 100 rekordow lub specyficzna kolumne
 
+dataframe.iloc[row, column] 
 print(dane.iloc[1,2])
-#wyswietla kolumne 1 rekord 2
+#wyswietla kolumne 2 rekord 1
 print(dane.iloc[[1,2]])
-#wyswietla obiekt dataframe z listy indexów x=1 i 2
+#wyswietla obiekt dataframe z listy indexów 
+print(iloc[1]) 
+#zwraca obiekt Series
+df.iloc[[0, 2], [0, 1]]
+df.iloc[0:2]
 
 print(dane.head(10))
 #print pierwsze 10 elementow
