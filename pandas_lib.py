@@ -4,8 +4,8 @@ lista = []
 
 for _ in range(0,100):
     lista .append(random.randint(0,100))
-dane = pd.Series(lista)
-
+dane = pd.Series(lista) #jedna kolumna
+dane = pd.DataFrame(lista) #wiele kolumn
 a = [1, 7, 2]
 myvar = pd.Series(a, index = ["x", "y", "z"])
 #argumenty to kolumny, indeksy
