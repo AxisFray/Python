@@ -86,9 +86,9 @@ sample(lista,ilosc) # zwraca liste z dlugoscia ilosc wybrana z listy
 random() #losowa liczba float z zakresu 0.0 - 1.0 bez 1
 
 
--    -    -    -    -    -    -    -       MATPLOTLIB    -    -    -    -    -    -    -    -    -    
+-    -    -    -    -    -    -    -       MATPLOTLIB  NUMPY  -    -    -    -    -    -    -    -    -    
 import matplotlib
-
+import numpy
 xpoints = np.array([0, 6])
 ypoints = np.array([0, 250])
 
@@ -153,6 +153,37 @@ matplotlib.subplot(1, 2, 1)
 //the figure has 1 row, 2 columns, and this plot is the first plot. 
 //mozna skladowac wykresu i potem pokazac 2 na raz
 
+matplotlib.scatter(x, y)
+//rysuje kropki na wykresie zamiast linii
+matplotlib.scatter(x, y,c="#FFF4344")
+
+matplotlib.scatter(x, y, c=colors, cmap='viridis')
+//mapa kolorowa skala 
+
+matplotlib.scatter(x, y, c=colors, cmap='viridis')
+matplotlib.colorbar()
+//dodaje skale kolorową obok mapy
+
+matplotlib.scatter(x, y, s=sizes)
+//sizes tablica,kropki wieksza wartosc wiekszy rozmiar
+
+matplotlib.scatter(x, y, s=sizes, alpha=0.5)
+//przezroczystosc kropekna wykresie
+
+matplotlib.bar(x,y)
+//wykres slupkowy
+
+matplotlib.bar(x,y)
+//wykresslupkowy od lewej
+
+    -    -    -    -    -    -
+x = np.random.randint(100, size=(100))
+y = np.random.randint(100, size=(100))
+colors = np.random.randint(100, size=(100))
+sizes = 10 * numpy.random.randint(100, size=(100))
+plt.scatter(x, y, c=colors, s=sizes, alpha=0.5, cmap='nipy_spectral')
+plt.colorbar()
+plt.show() 
 
     -    -    -    -    -
 #plot 1:
