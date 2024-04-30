@@ -227,3 +227,9 @@ plt.pie(y, labels = mylabels, explode = myexplode)
 
 matplotlib.pie(y, labels = mylabels, colors = mycolors)
 //y to dane ,labels nazwy, mycolors kolory
+
+matplotlib.legend()
+//dodajelegende do wykresu funkcji ,przed show()
+legend(title = "Four Fruits:")
+//tytul legendy
+
