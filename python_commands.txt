@@ -153,28 +153,6 @@ matplotlib.subplot(1, 2, 1)
 //the figure has 1 row, 2 columns, and this plot is the first plot. 
 //mozna skladowac wykresu i potem pokazac 2 na raz
 
-matplotlib.scatter(x, y)
-//rysuje kropki na wykresie zamiast linii
-matplotlib.scatter(x, y,c="#FFF4344")
-
-matplotlib.scatter(x, y, c=colors, cmap='viridis')
-//mapa kolorowa skala 
-
-matplotlib.scatter(x, y, c=colors, cmap='viridis')
-matplotlib.colorbar()
-//dodaje skale kolorową obok mapy
-
-matplotlib.scatter(x, y, s=sizes)
-//sizes tablica,kropki wieksza wartosc wiekszy rozmiar
-
-matplotlib.scatter(x, y, s=sizes, alpha=0.5)
-//przezroczystosc kropekna wykresie
-
-matplotlib.bar(x,y)
-//wykres slupkowy
-
-matplotlib.bar(x,y)
-//wykresslupkowy od lewej
 
     -    -    -    -    -    -
 x = np.random.randint(100, size=(100))
@@ -205,3 +183,47 @@ plt.title("INCOME")
 plt.show()
     -    -    -    -    -    
 
+matplotlib.scatter(x, y)
+//rysuje kropki na wykresie zamiast linii
+matplotlib.scatter(x, y,c="#FFF4344")
+
+matplotlib.scatter(x, y, c=colors, cmap='viridis')
+//mapa kolorowa skala 
+
+matplotlib.scatter(x, y, c=colors, cmap='viridis')
+matplotlib.colorbar()
+//dodaje skale kolorową obok mapy
+
+matplotlib.scatter(x, y, s=sizes)
+//sizes tablica,kropki wieksza wartosc wiekszy rozmiar
+
+matplotlib.scatter(x, y, s=sizes, alpha=0.5)
+//przezroczystosc kropekna wykresie
+
+matplotlib.bar(x,y)
+//wykres slupkowy
+
+matplotlib.bar(x,y)
+//wykresslupkowy od lewej
+
+plt.bar(x, y, color = "hotpink")
+
+matplotlib.hist(x)
+//histogram z listy x
+
+matplotlib.pie(y)
+//wykres kołowy zlisty y
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+plt.pie(y, labels = mylabels)
+//wykres kołowy z podpisami
+
+y = np.array([35, 25, 25, 15])
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+myexplode = [0.2, 0, 0, 0]
+plt.pie(y, labels = mylabels, explode = myexplode)
+//explode to odsuniecie czesci od wykresu tutaj apples
+
+matplotlib.pie(y, labels = mylabels, colors = mycolors)
+//y to dane ,labels nazwy, mycolors kolory
